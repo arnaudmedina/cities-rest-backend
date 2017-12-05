@@ -15,7 +15,9 @@ import org.slf4j.LoggerFactory;
 
 public class EntityManagerProducer {
 
-	private static String DEFAULT_JDBC_URL = "jdbc:h2:file:~/db/referentiel";
+//	private static String DEFAULT_JDBC_URL = "jdbc:h2:file:~/db/referentiel";
+//	private static String DEFAULT_JDBC_URL = "jdbc:h2:tcp://localhost/~/h2/h2-Simplon";
+	private static String DEFAULT_JDBC_URL = "jdbc:h2:tcp://localhost/C:/Users/Utilisateur-SJD/h2/referentiel";
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(EntityManagerProducer.class);
 	

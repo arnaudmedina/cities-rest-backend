@@ -6,6 +6,8 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
+import co.simplon.PoleEmploi.patrimoine.modele.Monument;
+import co.simplon.PoleEmploi.patrimoine.modele.Ville;
 import co.simplon.PoleEmploi.patrimoine.modele.Visite;
 
 @Named
@@ -63,6 +65,8 @@ public class VisiteJpaDao implements VisiteDao {
 
 	@Override
 	public Visite createVisiteForMonument(Visite visiteACreer, Long id) {
+		Monument monument = entityManager.find(Monument.class, id);
+		visiteACreer.setMonument(monument);
 		visiteACreer = createVisite(visiteACreer);
 		return visiteACreer;
 	}

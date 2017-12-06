@@ -105,6 +105,9 @@ public class VilleResource {
 		return Response.status(Status.BAD_REQUEST).build();
 	}
 
+	// Gestion de la demande de création de monument par une requête POST
+	// 
+	
 	@POST
 	@Path("{id}/monuments")
 	@Consumes(MediaType.APPLICATION_JSON)
